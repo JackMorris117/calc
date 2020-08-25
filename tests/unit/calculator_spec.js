@@ -54,5 +54,16 @@ describe('calculator', function () {
 
     
   })
+  it('should respond to number clicks', function () {
+    calculator.previousTotal = 3;
+    calculator.numberClick(4)
+    assert.equal(4, calculator.runningTotal)
+    calculator.numberClick(4)
+    calculator.numberClick(4)
+    assert.equal(444, calculator.runningTotal)
+
+
+    
+  })
   
 });
